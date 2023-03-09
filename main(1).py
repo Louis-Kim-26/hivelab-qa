@@ -9,18 +9,23 @@ from webdriver_manager.chrome import ChromeDriverManager
 # 엑셀 사용을 위한 라이브러리
 from openpyxl import load_workbook, Workbook
 
+<<<<<<< HEAD
 # 커스텀 모듈인 functions 불러오기
 import functions
 from locator import *
 
 class MainTest(unittest.TestCase):
 
+=======
+class MainTest(unittest.TestCase):
+>>>>>>> 86c3881c616c96321f8d964384ec4c0a2084ddf0
     # 테스트를 위한 설정
     def setUp(self) -> None:
         #드라이버 설정
         options = webdriver.ChromeOptions()
         options.add_experimental_option("detach", True)
         options.add_experimental_option("excludeSwitches", ["enable-logging"])
+<<<<<<< HEAD
         # options.add_argument("headless")
         self.driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
         self.driver.get("https://semdev.hivelab.co.kr:3443/global/galaxy/galaxy-s23/")
@@ -87,13 +92,27 @@ class MainTest(unittest.TestCase):
         excelfile = 'Disclaimer_Result.xlsx'
         sheetname = 'Sheet2'
         disclaimer.bottomDisclaimerNumber_order_check(excelfile, sheetname)
+=======
+        self.driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
+        self.driver.get("https://www.samsung.com/uk/smartphones/galaxy-s23-ultra/")
+    
+    def example1(self):
+        print("hello world")
+>>>>>>> 86c3881c616c96321f8d964384ec4c0a2084ddf0
 
     # 테스트 종료 후 드라이버 닫기
     def tearDown(self):
         self.driver.close()
+<<<<<<< HEAD
         
 
 
 if __name__ == "__main__":
     unittest.main()
     
+=======
+
+        
+if __name__ == "__main__":
+    unittest.main()
+>>>>>>> 86c3881c616c96321f8d964384ec4c0a2084ddf0
